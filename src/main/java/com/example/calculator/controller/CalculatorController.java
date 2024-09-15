@@ -37,6 +37,7 @@ public class CalculatorController {
         }
         return num1 + "-" + num2 + " = " + service.minus(num1, num2);
     }
+
     @GetMapping("/divide")
     public String divide(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
@@ -44,6 +45,7 @@ public class CalculatorController {
         }
         return num1 + "/" + num2 + " = " + service.divide(num1, num2);
     }
+
     @GetMapping("/multiply")
     public String multiply(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
         if (num1 == null || num2 == null) {
